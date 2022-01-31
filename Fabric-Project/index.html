@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Working with fabric js</h1>
+    <input type="color" id="favcolor" name="favcolor" value="#000000">
+    <button onclick="togglemode('pan')">Change Mode</button>
+    <button onclick="togglemode('draw')">Toggle Draw</button>
+    <button onclick="clearCanvas(canvas)">Clear Canvas</button>
+    <canvas id="c"></canvas>
+    <button onclick="rect(canvas)">Create Rectanle</button>
+    <button onclick="circle(canvas)">Create Circle</button>
+    <script src="./lib/fabric.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
