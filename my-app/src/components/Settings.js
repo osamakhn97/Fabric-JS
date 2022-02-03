@@ -1,4 +1,6 @@
 import { useState } from "react";
+// import {useDispatch,useSelector} from 'react-redux';
+// import {CanvasActions} from '../store/index.js';
 // import { fabric } from "fabric";
 const Settings = (props) => {
   const [color, changeColor] = useState("");
@@ -7,6 +9,8 @@ const Settings = (props) => {
   const [radius, changeRadius] = useState("");
   const [border,setBorder] = useState("");
   const [allColors, setAll] = useState("");
+  // const dispatch = useDispatch();
+  // const CanvasState = useSelector(state=>state.canvasState.canvasState);
  
   // const getSelectedItems = ()=>{
   // console.log(props.canvas.getActiveObject());
@@ -16,6 +20,8 @@ const Settings = (props) => {
 
   // }
   const colorHandler = (e) => {
+    // const b = JSON.stringify(props.canvas);
+    // dispatch(CanvasActions.changeCanvasState(b));
     changeColor(e.target.value);
 
     let a = props.canvas.getActiveObject();
