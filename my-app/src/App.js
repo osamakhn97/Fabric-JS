@@ -39,8 +39,17 @@ const [canvasVisibility, setCanvasVisibility]= useState(true)
         console.log("mouse down...");
       })
     }
+
+    return ()=>{
+      canvasTemp.off('mouse:down');
+      unsub();
+      
+    }
   }, [canvasVisibility]);
-  
+  const unsub = ()=>{
+    canvas.off('mouse:down');
+    console.log('unsubscribed');
+  }
 // const a = JSON.stringify(canvas);
 // console.log(canvas);
 

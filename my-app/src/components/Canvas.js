@@ -1,6 +1,11 @@
 import { useEffect } from 'react';
 import './Canvas.css';
 const Canvas = (props)=>{
+    // const unsub = ()=>{
+    //     props.canvas.__eventListeners = {};
+    
+    //     console.log(props.canvas.__eventListeners);
+    // }
     useEffect(()=>{
 console.log("mounted");
 // setTimeout(() => {
@@ -10,10 +15,9 @@ console.log("mounted");
 return ()=>{
     console.log('unmounted');
     // props.canvas.on('mouse:up',()=>{console.log('mouse up')});
+    // unsub();
 }
 },[])
-
-console.log(props.canvas.__eventListeners);
     return (
         <div className="canvasStyle">
 
